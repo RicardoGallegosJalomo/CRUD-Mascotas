@@ -1,0 +1,11 @@
+{% extends 'mascotas/list.html' %}
+
+{% block content %}
+
+<form method="post">
+	{% csrf_token %}
+	{{ form }}
+	<button>Agregar Servicio</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'mascotas/list.html' %}
+
+{% block content %}
+
+	<button><a href="{%url 'agregar' %}">Agregar</a></button>
+	<h1> Lista de Mascotas</h1>
+
+	<ul>	
+		
+		{% for dato in datos %}
+			<li>{{ dato }}</li>
+			<button><a href="{%url 'eliminar' dato.id %}">Eliminar</a></button>
+			<button><a href="{%url 'editar' dato.id %}">Editar</a></button>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
